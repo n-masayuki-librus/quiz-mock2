@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      // show popupボタンクリック時の処理
+      // $('#show').click(function(e) {
+      //     $('#popup, #container').show();
+      // });
+      // ポップアップのcloseボタンクリック時の処理
+      $('#close, #container').click(function(e) {
+          $('#popup, #container').hide();
+      });
+    });
+
+    function openPopup(){
+        $('#popup, #container').show();
+    };
+
+    setTimeout("openPopup()", 2000);
+    </script>
+  </head>
+  <body>
+
+    <h1>サンプルページ</h1>
+
+    <p>2秒後にQUIZ!がポップアップします。</p>
+
+    <!-- <input type="button" id="show" value="show popup"> -->
+    <div id="container"></div>
+    <div id="popup">
+      <div class="iframe-wrapper">
+        <img src="./img/61155.png" id="close" alt="">
+        <!-- <input type="button" value="close popup"> -->
+        <iframe width="800" height="800" src="./question1.html" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="./main.html" frameborder="0" class="iframe"></iframe> -->
+        <!-- <iframe id="quizInlineFrame"
+        title="Inline Frame Example"
+        width="300"
+        height="400"
+        class="iframe"
+        src="./main.html">
+        </iframe> -->
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      var query = location.search;
+      var value = query.split('=');
+      var resultPoint = "";
+      console.log(decodeURIComponent(value[1]));
+      if (decodeURIComponent(value[1]) === "1") {
+        resultPoint=resultPoint + "1";
+      } else {
+        resultPoint=resultPoint + "0";
+      }
+      function setChoice(choice){
+        location.href = './question3.html?resultPoint=' + encodeURIComponent(resultPoint) + '&choice=' +  encodeURIComponent(choice);
+      }
+    </script>
+  </head>
+  <body>
+
+  <h3>
+    <span class='h3Char1'>Q</span><span class='h3Char2'>U</span><span class='h3Char3'>I</span><span class='h3Char4'>Z</span><span class='h3Char1'>!</span>
+  </h3>
+
+  <p class="questionSentence">第二問：スカルプDのシャンプーは何種類？</p>
+  <br>
+  <ul>
+    <li><div class="choice1" onclick="setChoice('0')">①9種類</div></li>
+    <li><div class="choice2" onclick="setChoice('1')">②11種類</div></li>
+    <li><div class="choice3" onclick="setChoice('0')">③7種類</div></li>
+    <li><div class="choice4" onclick="setChoice('0')">④この中に正解はない</div></li>
+  </ul>
+
+  </body>
+</html>

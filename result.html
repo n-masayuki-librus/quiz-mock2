@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      var query = location.search;
+      var rawValue1 = query.split('?');
+      var value = rawValue1[1].split('&');
+      var resultPoint = value[0].split('=')[1];
+      var preChoice = value[1].split('=')[1];
+      console.log(decodeURIComponent(preChoice));
+      console.log(decodeURIComponent(resultPoint));
+      if (decodeURIComponent(preChoice) === "1") {
+        resultPoint+=1;
+      } else {
+        resultPoint=resultPoint + "0";
+      }
+      console.log('あああ' + resultPoint);
+      var counter=function(str,seq){
+          return str.split(seq).length - 1;
+      }
+      correctCt=counter(resultPoint,"1")
+      console.log(resultPoint+":"+correctCt);
+      function  firstscript(){
+        document.getElementById('resultCount').innerHTML = 'あなたは3問中' + counter(resultPoint,"1") + '問正解でした。';
+        var resultText;
+        if (correctCt == 3){
+          resultText = "おめでとうございます！素晴らしいですね！<br>弊社のことを知っていただきありがとうございます。"
+        } else {
+          resultText = "ご回答ありがとうございました。<br>機会がございましたら弊社のことをもっと調べていただければと存じます。"
+        }
+        document.getElementById('resultText').innerHTML = resultText;
+
+        var questionResult1 = "第一問は"
+        if (resultPoint[0] == "1"){
+          questionResult1+="正解です。<br>"
+        } else {
+          questionResult1+="不正解です。<br>"
+        }
+
+        questionResult1 += "人気の発毛剤は弊社が誇るスカルプDです。";
+        document.getElementById('questionResult1').innerHTML = questionResult1;
+
+
+        var questionResult2 = "第二問は"
+        if (resultPoint[1] == "1"){
+          questionResult2+="正解です。<br>"
+        } else {
+          questionResult2+="不正解です。<br>"
+        }
+
+
+        questionResult2 += "弊社の発毛剤は11もの種類がございます。";
+        document.getElementById('questionResult2').innerHTML = questionResult2;
+
+
+        var questionResult3 = "第三問は"
+        if (resultPoint[2] == "1"){
+          questionResult3+="正解です。<br>"
+        } else {
+          questionResult3+="不正解です。<br>"
+        }
+
+        questionResult3 += "CMに登場しているのは、ミノキ兄弟（草彅剛さんと香取慎吾さん）です。";
+        document.getElementById('questionResult3').innerHTML = questionResult3;
+
+      }
+    </script>
+  </head>
+  <body onload="firstscript();">
+
+  <h3>
+    <span class='h3Char1'>Q</span><span class='h3Char2'>U</span><span class='h3Char3'>I</span><span class='h3Char4'>Z</span><span class='h3Char1'>!</span>
+  </h3>
+
+  <p class="questionSentence">お疲れ様です。</p>
+  <br>
+  <p><div id='resultCount'></div></p>
+
+  <p><div id='resultText'></div></p>
+
+  <br>
+
+  <p>〜解答・解説〜</p>
+
+  <p><div id='questionResult1'></div></p>
+
+  <p><div id='questionResult2'></div></p>
+
+  <p><div id='questionResult3'></div></p>
+
+  </body>
+</html>

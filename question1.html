@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      function setChoice(choice){
+        location.href = './question2.html?choice=' +  encodeURIComponent(choice)
+      }
+    </script>
+  </head>
+  <body>
+
+  <h3>
+    <span class='h3Char1'>Q</span><span class='h3Char2'>U</span><span class='h3Char3'>I</span><span class='h3Char4'>Z</span><span class='h3Char1'>!</span>
+  </h3>
+
+  <p class="questionSentence">第一問：人気の発毛剤はどれ？</p>
+  <br>
+  <ul>
+    <li><div class="choice1" onclick="setChoice('1')">①スカルプD</div></li>
+    <li><div class="choice2" onclick="setChoice('0')">②チャップアップ</div></li>
+    <li><div class="choice3" onclick="setChoice('0')">③リアップ</div></li>
+    <li><div class="choice4" onclick="setChoice('0')">④リグロ</div></li>
+  </ul>
+
+  </body>
+</html>

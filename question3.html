@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      var query = location.search;
+      var rawValue1 = query.split('?');
+      var value = rawValue1[1].split('&');
+      var resultPoint = value[0].split('=')[1];
+      var preChoice = value[1].split('=')[1];
+      console.log(decodeURIComponent(preChoice));
+      console.log(decodeURIComponent(resultPoint));
+      if (decodeURIComponent(preChoice) === "1") {
+        resultPoint+=1;
+      } else {
+        resultPoint=resultPoint + "0";
+      }
+      function setChoice(choice){
+        location.href = './result.html?resultPoint=' + encodeURIComponent(resultPoint) + '&choice=' +  encodeURIComponent(choice);
+      }
+    </script>
+  </head>
+  <body>
+
+  <h3>
+    <span class='h3Char1'>Q</span><span class='h3Char2'>U</span><span class='h3Char3'>I</span><span class='h3Char4'>Z</span><span class='h3Char1'>!</span>
+  </h3>
+
+  <p class="questionSentence">第三問：スカルプDのCMに出ている芸能人は？</p>
+  <br>
+  <ul>
+    <li><div class="choice1" onclick="setChoice('1')">①ミノキ兄弟</div></li>
+    <li><div class="choice2" onclick="setChoice('0')">②トレンディエンジェル</div></li>
+    <li><div class="choice3" onclick="setChoice('0')">③バイきんぐ</div></li>
+    <li><div class="choice4" onclick="setChoice('0')">④この中に正解はない</div></li>
+  </ul>
+
+  </body>
+</html>
