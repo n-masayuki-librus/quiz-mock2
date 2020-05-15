@@ -18,11 +18,12 @@ body {
 }
 
 h3 {
-  font-size: 26px;
-  display        : inline-block;
-  color          : #ffffff;            /* 文字の色 */
-  font-size      : 36pt;               /* 文字のサイズ */
-  letter-spacing : 6px;                /* 文字間 */
+  font-size: 36px;
+  font-weight: bold;
+  /* display        : inline-block; */
+  color          : #000080;            /* 文字の色 */
+  /* font-size      : 36pt;
+  letter-spacing : 6px;
   text-shadow    :
        3px  3px 3px #1a1aff,
       -3px  3px 3px #1a1aff,
@@ -31,7 +32,7 @@ h3 {
        3px  0px 3px #1a1aff,
        0px  3px 3px #1a1aff,
       -3px  0px 3px #1a1aff,
-       0px -3px 3px #1a1aff;        /* 文字の影 */
+       0px -3px 3px #1a1aff;        */
 }
 
 p {
