@@ -6,11 +6,16 @@
 
 .iframe-wrapper img {
   position: fixed;
+  cursor: pointer;
   top: 41%;
   left: 61%;
   width: 2%;
   /* height: 10%; */
   /* height: 80%; */
+}
+
+.iframe-wrapper img:hover{
+  opacity: 0.3;
 }
 
 .iframe-wrapper iframe {
