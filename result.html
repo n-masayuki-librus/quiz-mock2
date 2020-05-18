@@ -28,9 +28,11 @@
         document.getElementById('resultCount').innerHTML = 'あなたは3問中' + counter(resultPoint,"1") + '問正解でした。';
         var resultText;
         if (correctCt == 3){
-          resultText = "おめでとうございます！素晴らしいですね！<br>弊社のことを知っていただきありがとうございます。"
+          resultText = "おめでとうございます！素晴らしいですね！"
+          // resultText = "おめでとうございます！素晴らしいですね！<br>弊社のことを知っていただきありがとうございます。"
         } else {
-          resultText = "ご回答ありがとうございました。<br>機会がございましたら弊社のことをもっと調べていただければと存じます。"
+          resultText = "ご回答ありがとうございました。"
+          // resultText = "ご回答ありがとうございました。<br>機会がございましたら弊社のことをもっと調べていただければと存じます。"
         }
         document.getElementById('resultText').innerHTML = resultText;
 
@@ -41,7 +43,7 @@
           questionResult1+="不正解です。<br>"
         }
 
-        questionResult1 += "人気の発毛剤は弊社が誇るスカルプDです。";
+        questionResult1 += "インタネットの検索ページで影響があるのは、「営業活動」「株価」「求人募集」すべてとなります。";
         document.getElementById('questionResult1').innerHTML = questionResult1;
 
 
@@ -53,7 +55,7 @@
         }
 
 
-        questionResult2 += "弊社の発毛剤は11もの種類がございます。";
+        questionResult2 += "検索結果の１ページ目しか見ないのは全体で94％です。";
         document.getElementById('questionResult2').innerHTML = questionResult2;
 
 
@@ -64,7 +66,7 @@
           questionResult3+="不正解です。<br>"
         }
 
-        questionResult3 += "CMに登場しているのは、ミノキ兄弟（草彅剛さんと香取慎吾さん）です。";
+        questionResult3 += " 「一度ウェブ上にアップされた情報は完全には消せない」ことを、デジタルタトゥーと言います。";
         document.getElementById('questionResult3').innerHTML = questionResult3;
 
       }
