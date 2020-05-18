@@ -193,4 +193,7 @@ ul li:hover{
   height: 80%;
   /* border: 2px red solid */
 }
+.showImg{
+  width: 100%
+}
 }
