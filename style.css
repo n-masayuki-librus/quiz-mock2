@@ -7,8 +7,8 @@
 .iframe-wrapper img {
   position: fixed;
   cursor: pointer;
-  top: 41%;
-  left: 61%;
+  top: 56%;
+  left: 76%;
   width: 2%;
   /* height: 10%; */
   /* height: 80%; */
@@ -20,10 +20,10 @@
 
 .iframe-wrapper iframe {
   position: fixed;
-  top: 40%;
-  left: 60%;
-  width: 40%;
-  height: 60%;
+  top: 55%;
+  left: 75%;
+  width: 25%;
+  height: 45%;
   /* border: 2px red solid */
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
   /* display        : inline-block; */
   color          : blue;            /* 文字の色 */
@@ -140,7 +140,10 @@ ul li:hover{
 } */
 
 .questionSentence{
-  font-weight: bold;
+  /* font-size: 0.9em; */
+  font-size: 18px;
+  margin-top: -5%;
+  /* font-weight: bold; */
 }
 
 #container {
